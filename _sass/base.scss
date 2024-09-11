@@ -1,0 +1,77 @@
+@import "card";
+@import "header";
+@import "nav";
+@import "section_header";
+@import "project_card";
+@import "vars";
+
+:root {
+  background-color: $bg;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  color: $p-text;
+}
+
+section {
+  padding-right: $default-margin;
+  padding-left: $default-margin;
+
+  @media only screen and (max-width: 1600px) {
+    padding-right: $margin-1600;
+    padding-left: $margin-1600;
+  }
+
+  @media only screen and (max-width: 1000px) {
+    padding-right: $margin-1000;
+    padding-left: $margin-1000;
+  }
+
+  @media only screen and (max-width: 400px) {
+    padding-right: $margin-400;
+    padding-left: $margin-400;
+  }
+}
+
+.timeline {
+  background: $accent;
+  background: linear-gradient(0deg, $bg 0%, $accent 150px, $accent calc(100% - 75px), $bg 100%);
+  width: 6px;
+  margin-top: 5px;
+
+  @media only screen and (max-width: 400px) {
+    display: none;
+  }
+}
+
+.card-container {
+  &:first {
+    margin-top: 100px;
+  }
+
+  &:last-child {
+    margin-bottom: 20px;
+  }
+
+  margin-bottom: 50px;
+}
+
+.timeline-sec {
+  display: grid;
+  grid-template-columns: 6px 1fr;
+
+  @media only screen and (max-width: 400px) {
+    grid-template-columns: 100%;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $p-text;
+}

@@ -1,0 +1,82 @@
+@import "vars";
+
+$content-padding: 20px;
+$project-card-width: 275px;
+$project-card-height: 400px;
+$project-preview-height: 185px;
+$project-preview-width: 275px;
+
+#project-card-container {
+    margin-left: 50px;
+
+    @media only screen and (max-width: 500px) {
+        margin-left: 25px;
+    }
+
+    @media only screen and (max-width: 400px) {
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    margin-top: 30px;
+    margin-bottom: 40px;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.project-content {
+    height: 100%;
+    justify-self: left;
+    position: relative;
+
+    .card-tags {
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+.project-card {
+    display: grid;
+    grid-template-rows: $project-preview-height 55px 1fr;
+    grid-template-columns: 100%;
+    justify-items: center;
+    align-items: start;
+    font-family: "open-sans", sans-serif;
+    background: color-mix(in srgb, $accent, transparent 80%);
+    border-radius: 7px;
+    padding: $content-padding $content-padding 5px $content-padding;
+    width: $project-card-width;
+    height: $project-card-height;
+    transition: $th-transition;
+
+    @media only screen and (max-width: 360px) {
+        width: $project-card-width - 20px;
+    }
+
+    h1 {
+        font-size: 25px;
+        margin: 0;
+        padding-top: 10px;
+        justify-self: left;
+        align-self: center;
+        text-wrap: nowrap;
+    }
+
+    p {
+        margin: 0;
+        font-weight: 300;
+        font-size: 15px;
+        max-width: 500px;
+    }
+
+    img {
+        width: $project-preview-width;
+        height: $project-preview-height;
+        align-self: center;
+    }
+}
+
+.project-card:hover {
+    transform: scale(1.03);
+}

@@ -1,0 +1,87 @@
+@import "vars";
+
+#nav {
+  position: sticky;
+  top: 0;
+  background-color: $bg;
+  z-index: 10;
+  padding: 10px $default-margin;
+
+  @media only screen and (max-width: 1600px) {
+    padding: 10px $margin-1600;
+  }
+
+  @media only screen and (max-width: 1000px) {
+    padding: 10px $margin-1000;
+  }
+
+  display: grid;
+  grid-template-rows: 100%;
+  justify-content: left;
+  grid-template-columns: 50% 50%;
+
+  #links {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 40px;
+    justify-content: right;
+    align-items: center;
+  }
+
+  .nav-link {
+    font-family: "proxima-nova", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 22px;
+    width: fit-content;
+    height: fit-content;
+    color: $p-text;
+
+    @media only screen and (max-width: 1000px) {
+      display: none;
+    }
+
+    text-decoration: none;
+    text-align: left;
+    transition: $th-transition;
+  }
+
+  #nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    img {
+      width: 70px;
+      height: 70px;
+    }
+
+    margin: 0;
+
+    h1 {
+      font-family: "sofia-pro", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+      font-size: 32px;
+      text-align: center;
+      margin: 0;
+    }
+  }
+
+  .nav-link:hover {
+    color: $accent;
+  }
+
+  #special {
+    color: $bg;
+    background: $accent;
+    border-radius: 10px;
+    padding: 0px 10px;
+    transition: $th-transition;
+    display: inline;
+  }
+
+  #special:hover {
+    background: $p-text;
+  }
+}

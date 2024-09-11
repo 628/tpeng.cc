@@ -1,0 +1,21 @@
+url: "https://petrovski.cc"
+baseurl: "/"
+title: "Sandro Petrovski" # the name of your site, e.g. ACME Corp.
+collections:
+ education:
+  sort_by: endYear
+ projects:
+  sort_by: sort
+ experience:
+  sort_by: endYear
+
+highlighter: rouge
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: highlight
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1

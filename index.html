@@ -1,0 +1,202 @@
+---
+layout: main
+---
+
+<!-- Navigation Bar -->
+<section id="nav">
+    <div id="nav-logo">
+        <img src="assets/logo.png" alt="taupau engineering logo"/>
+        <h1>TauPau Engineering</h1>
+    </div>
+    <div id="links">
+        <a class="nav-link" href="#projects">Projects</a>
+        <a class="nav-link" href="#experience">Experience</a>
+        <a class="nav-link" href="#education">Education</a>
+        <a id="special" class="nav-link" href="/discord" target="_blank">Discord</a>
+    </div>
+</section>
+
+<!-- Header -->
+<section id="header">
+    <div id="header-timeline"></div>
+    <div id="content">
+        <h1>Sandro Petrovski</h1>
+        <div>
+            <h3>B.S.E. Computer Engineering</h3>
+            <h3>University of Michigan</h3>
+        </div>
+        <p id="blurb"><span>Welcome!</span> I'm Sandro, a third-year CE student at the University of Michigan with a
+            passion for both software and hardware! From a young age I've always loved building things from the
+            ground up and exploring new technologies. My main project is the TauPau Engineering organization where I'm
+            working to more formally document projects for others to learn from as well! Feel free to have a look around
+            at the things I've built. :)</p>
+        <div id="links">
+            <a href="https://github.com/628/" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/sandro-petrovski-4694411ab/" target="_blank"><i
+                    class="fa-brands fa-linkedin"></i></a>
+            <a href="mailto:sandropetrovski@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- Projects -->
+<section id="projects">
+    <div class="section-header"><img src="assets/bulb.png" />
+        <h1>Projects</h1>
+    </div>
+
+    <div class="timeline-sec">
+        <div class="timeline"></div>
+        <div id="project-card-container">
+            {% assign projects = site.projects | sort:"year" %}
+            {% for card in projects reversed %}
+            <a href="{{ card.link }}" target="_blank">
+                <div class="project-card">
+                    <img src="assets/{{ card.image }}.png">
+                    <h1>{{ card.name }}</h1>
+                    <div class="project-content">
+                        {{ card.content }}
+                        <div class="card-tags">
+                            <div class="card-tag-section">
+                                {% for tag in card.langs %}
+                                <div class="card-tag" style="background-color: #FF6961;">
+                                    <p>{{ tag }}</p>
+                                </div>
+                                {% endfor %}
+                                {% for tag in card.tools %}
+                                <div class="card-tag" style="background-color: #C3B1E1;">
+                                    <p>{{ tag }}</p>
+                                </div>
+                                {% endfor %}
+                                {% for tag in card.platforms %}
+                                <div class="card-tag" style="background-color: #A0D9EF;">
+                                    <p>{{ tag }}</p>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Experience -->
+<section id="experience">
+    <div class="section-header"><img src="assets/briefcase.png" />
+        <h1>Experience</h1>
+    </div>
+
+    <div class="timeline-sec">
+        <div class="timeline"></div>
+        <div class="timeline-card-container">
+            {% assign experience = site.experience | sort:"endYear" %}
+            {% for card in experience reversed %}
+            <div class="timeline-diamond"></div>
+            <div class="card-cont">
+                {% if card.summer %}
+                <p class="timeline-card-dates">{{ card.startYear | prepend: "Summer " }}</p>
+                {% elsif card.endYear > 3000 %}
+                <p class="timeline-card-dates">{{ card.startYear | append: " - Present" }}</p>
+                {% else %}
+                <p class="timeline-card-dates">{{ card.startYear | append: " - " | append: card.endYear}}</p>
+                {% endif %}
+                <div class="card">
+                    <div class="card-header">
+                        <div class="timeline-arrow"></div>
+                        <h1>{{ card.title }}</h1>
+                    </div>
+                    {% if card.secondaryTitle != "" %}
+                    <h3>{{ card.secondaryTitle }}</h3>
+                    {% endif %}
+                    {% if card.content != "" %}
+                    <p>{{ card.content }}</p>
+                    {% endif %}
+                    <div class="card-tags">
+                        <div class="card-tag-section">
+                            {% for tag in card.stat %}
+                            <div class="card-tag" style="background-color: #A0D9EF;">
+                                <p>{{ tag }}</p>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <div class="card-tag-section">
+                            {% for tag in card.award %}
+                            <div class="card-tag" style="background-color: #FF7E83;">
+                                <p>{{ tag }}</p>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <div class="card-tag-section">
+                            {% for tag in card.course %}
+                            <div class="card-tag" style="background-color: #DA70D6;">
+                                <p>{{ tag }}</p>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Education -->
+<section id="education">
+    <div class="section-header"><img src="assets/male-student.png" />
+        <h1>Education</h1>
+    </div>
+
+    <div class="timeline-sec">
+        <div class="timeline"></div>
+        <div class="timeline-card-container">
+            {% assign education = site.education | sort:"endYear" %}
+            {% for card in education reversed %}
+            {% if card.timelined %}
+            <div class="timeline-diamond"></div>
+            {% endif %}
+            <div class="card-cont">
+                <p class="timeline-card-dates">{{ card.startYear | append: " - " | append: card.endYear}}</p>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="timeline-arrow"></div>
+                        <h1>{{ card.title }}</h1>
+                    </div>
+                    {% if card.secondaryTitle != "" %}
+                    <h3>{{ card.secondaryTitle }}</h3>
+                    {% endif %}
+                    {% if card.content != "" %}
+                    <p>{{ card.content }}</p>
+                    {% endif %}
+                    <div class="card-tags">
+                        <div class="card-tag-section">
+                            {% for tag in card.stat %}
+                            <div class="card-tag" style="background-color: #A0D9EF;">
+                                <p>{{ tag }}</p>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <div class="card-tag-section">
+                            {% for tag in card.award %}
+                            <div class="card-tag" style="background-color: #FF7E83;">
+                                <p>{{ tag }}</p>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <div class="card-tag-section">
+                            {% for tag in card.course %}
+                            <div class="card-tag" style="background-color: #DA70D6;">
+                                <p>{{ tag }}</p>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

@@ -1,0 +1,133 @@
+@import "vars";
+
+.card {
+    font-family: "open-sans", sans-serif;
+    background: color-mix(in srgb, $accent, transparent 80%);
+    border-radius: 5px;
+    padding: 10px;
+    width: fit-content;
+    max-width: $max-card-width;
+
+    h1 {
+        font-size: 32px;
+        margin: 0;
+    }
+    
+    h3 {
+        font-size: 15px;
+        opacity: 50%;
+        margin: 0 0 5px;
+    }
+    
+    p {
+        margin: 0;
+        font-size: 15px;
+        max-width: $max-card-width;
+    }
+}
+
+.card-tags {
+    margin-top: 10px;
+
+    .card-tag {
+        width: fit-content;
+        border-radius: 10px;
+
+        margin-bottom: 7px;
+        margin-right: 7px;
+
+        p {
+            padding: 3px 6px;
+            font-size: 13px;
+            font-weight: 600;
+            color: $bg;
+        }
+    }
+
+    .card-tag-section {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: $max-card-width;
+    }
+}
+
+.timeline-arrow {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid $p-text;
+    border-radius: 1px;
+    justify-self: right;
+    margin-right: 10px;
+    margin-top: 12px;
+    align-self: start;
+
+    @media only screen and (max-width: 400px) {
+        display: none;
+    }
+}
+
+.card-header {
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    align-items: center;
+    position: relative;
+    transform: translateX(-20px);
+
+    @media only screen and (max-width: 400px) {
+        grid-template-columns: 1fr;
+        transform: none;
+    }
+}
+
+.timeline-diamond {
+    width: 22px;
+    height: 22px;
+    border: 6px solid $accent;
+    background-color: $bg;
+    border-radius: 2px;
+    transform: translateX(-20px) translateY(15px) rotate(45deg);
+
+    @media only screen and (max-width: 400px) {
+        display: none;
+    }
+}
+
+.timeline-card-container {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+
+    @media only screen and (max-width: 400px) {
+        display: block;
+    }
+
+    @media only screen and (max-width: 500px) {
+        grid-template-columns: 40px 1fr;
+    }
+
+    .card {
+        margin-bottom: 60px;
+    }
+
+    &:nth-child(2) {
+        margin-top: 50px;
+    }
+
+    &:last-child {
+        margin-bottom: -30px;
+    }
+}
+
+.timeline-card-dates {
+    transform: translateY(-50px);
+    font-family: "open-sans", sans-serif;
+    font-size: 20px;
+    opacity: 50%;
+}
+
+.card-cont {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0px 1fr;
+}
