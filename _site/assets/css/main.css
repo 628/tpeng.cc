@@ -282,12 +282,11 @@
 }
 
 #project-card-container {
-  margin-left: 50px;
-  margin-top: 30px;
   margin-bottom: 40px;
   display: flex;
   gap: 30px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 @media only screen and (max-width: 500px) {
   #project-card-container {
@@ -352,6 +351,14 @@
 
 .project-card:hover {
   transform: scale(1.03);
+}
+
+#projects-title {
+  font-family: "sofia-pro", sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 50px;
 }
 
 #preview-cards {
@@ -447,6 +454,7 @@
   grid-template-columns: 100%;
   margin-top: 100px;
   margin-bottom: 50px;
+  width: fit-content;
 }
 #latest-blog h3 {
   color: #3498DB;
@@ -484,10 +492,13 @@
 }
 
 #blog-list {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   width: 100%;
+  margin-top: 150px;
+}
+#blog-list #latest-blogs {
+  justify-self: left;
 }
 #blog-list #latest-blogs div {
   display: flex;
@@ -498,42 +509,84 @@
 #blog-list #latest-blogs div h1 {
   font-size: 15px;
   font-family: "proxima-nova", sans-serif;
-  font-weight: 700;
+  font-weight: 400;
   margin: 0;
   text-wrap: nowrap;
   width: fit-content;
 }
 #blog-list #blog-info {
   max-width: 450px;
+  justify-self: right;
 }
-#blog-list #blog-info #about-blog h1 {
+#blog-list #blog-info #about-blog h1,
+#blog-list #blog-info #pinned-blogs h1,
+#blog-list #blog-info #topics h1 {
   font-family: "sofia-pro", sans-serif;
   font-weight: 700;
   font-size: 30px;
   margin: 0;
 }
-#blog-list #blog-info #about-blog .preview {
+#blog-list #blog-info #about-blog .title,
+#blog-list #blog-info #pinned-blogs .title,
+#blog-list #blog-info #topics .title {
+  transition: 0.3s;
+}
+#blog-list #blog-info #about-blog .preview,
+#blog-list #blog-info #pinned-blogs .preview,
+#blog-list #blog-info #topics .preview {
   font-family: "proxima-nova", sans-serif;
   font-weight: 400;
   font-size: 15px;
   margin: 0;
 }
-#blog-list #blog-info #about-blog .post-info {
+#blog-list #blog-info #about-blog .sec-header,
+#blog-list #blog-info #pinned-blogs .sec-header,
+#blog-list #blog-info #topics .sec-header {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+#blog-list #blog-info #about-blog .sec-header h1,
+#blog-list #blog-info #pinned-blogs .sec-header h1,
+#blog-list #blog-info #topics .sec-header h1 {
+  font-family: "proxima-nova", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  margin: 0;
+}
+#blog-list #blog-info #about-blog .post-info,
+#blog-list #blog-info #pinned-blogs .post-info,
+#blog-list #blog-info #topics .post-info {
   display: flex;
   gap: 5px;
   flex-wrap: nowrap;
+  margin-top: 5px;
 }
-#blog-list #blog-info #about-blog .post-info p {
+#blog-list #blog-info #about-blog .post-info p,
+#blog-list #blog-info #pinned-blogs .post-info p,
+#blog-list #blog-info #topics .post-info p {
   margin: 0;
   font-family: "proxima-nova", sans-serif;
   font-weight: 400;
   font-size: 14px;
 }
-#blog-list #blog-info #about-blog .post-info p:first-of-type {
+#blog-list #blog-info #about-blog .post-info p:first-of-type,
+#blog-list #blog-info #pinned-blogs .post-info p:first-of-type,
+#blog-list #blog-info #topics .post-info p:first-of-type {
   color: #3498DB;
 }
-#blog-list #blog-info #about-blog .post-info p:last-of-type {
+#blog-list #blog-info #about-blog .post-info p:last-of-type,
+#blog-list #blog-info #pinned-blogs .post-info p:last-of-type,
+#blog-list #blog-info #topics .post-info p:last-of-type {
   color: #FCFCFF;
+  filter: brightness(60%);
+}
+#blog-list #blog-info #pinned-blogs {
+  margin-top: 50px;
+}
+#blog-list #blog-info #about-blog:hover .title {
   filter: brightness(60%);
 }
 
@@ -541,6 +594,73 @@
   height: 1px;
   width: 100%;
   background-color: #FCFCFF;
+  filter: brightness(80%);
+}
+
+#topics .sec-header div {
+  height: 1px;
+}
+
+.project-tag {
+  padding: 2px 6px;
+  color: #1A1B1F;
+  font-family: "proxima-nova", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  border-radius: 10px;
+  transition: 0.3s;
+  margin: 0;
+}
+
+.project-tag:hover {
+  background-color: #FCFCFF !important;
+}
+
+#project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 50px;
+}
+
+#latest-blogs a {
+  margin-bottom: 50px;
+}
+#latest-blogs .title {
+  font-family: "sofia-pro", sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+  margin: 0;
+}
+#latest-blogs .preview {
+  font-family: "proxima-nova", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  margin: 0;
+}
+#latest-blogs .post-info {
+  display: flex;
+  gap: 5px !important;
+  flex-wrap: nowrap;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+#latest-blogs .post-info p {
+  margin: 0;
+  font-family: "proxima-nova", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+#latest-blogs .post-info p:first-of-type {
+  color: #3498DB;
+}
+#latest-blogs .post-info p:last-of-type {
+  color: #FCFCFF;
+  filter: brightness(60%);
+}
+
+#pinned-blogs a {
+  padding-bottom: 50px;
 }
 
 :root {

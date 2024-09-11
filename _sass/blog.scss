@@ -3,6 +3,7 @@
     grid-template-columns: 100%;
     margin-top: 100px;
     margin-bottom: 50px;
+    width: fit-content;
 
     h3 {
         color: $accent;
@@ -46,12 +47,14 @@
 }
 
 #blog-list {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     width: 100%;
+    margin-top: 150px;
 
     #latest-blogs {
+        justify-self: left;
+
         div {
             display: flex;
             flex-wrap: nowrap;
@@ -61,7 +64,7 @@
             h1 {
                 font-size: 15px;
                 font-family: "proxima-nova", sans-serif;
-                font-weight: 700;
+                font-weight: 400;
                 margin: 0;
                 text-wrap: nowrap;
                 width: fit-content;
@@ -71,13 +74,20 @@
 
     #blog-info {
         max-width: 450px;
+        justify-self: right;
 
-        #about-blog {
+        #about-blog,
+        #pinned-blogs,
+        #topics {
             h1 {
                 font-family: "sofia-pro", sans-serif;
                 font-weight: 700;
                 font-size: 30px;
                 margin: 0;
+            }
+
+            .title {
+                transition: 0.3s;
             }
 
             .preview {
@@ -87,10 +97,26 @@
                 margin: 0;
             }
 
+            .sec-header {
+                display: flex;
+                flex-wrap: nowrap;
+                gap: 20px;
+                align-items: center;
+                margin-bottom: 10px;
+
+                h1 {
+                    font-family: "proxima-nova", sans-serif;
+                    font-weight: 400;
+                    font-size: 15px;
+                    margin: 0;
+                }
+            }
+
             .post-info {
                 display: flex;
                 gap: 5px;
                 flex-wrap: nowrap;
+                margin-top: 5px;
 
                 p {
                     margin: 0;
@@ -109,6 +135,16 @@
                 }
             }
         }
+
+        #pinned-blogs {
+            margin-top: 50px;
+        }
+
+        #about-blog:hover {
+            .title {
+                filter: brightness(60%);
+            }
+        }
     }
 }
 
@@ -116,4 +152,85 @@
     height: 1px;
     width: 100%;
     background-color: $p-text;
+    filter: brightness(80%);
+}
+
+#topics {
+    .sec-header {
+        div {
+            height: 1px;
+        }
+    }
+}
+
+.project-tag {
+    padding: 2px 6px;
+    color: $bg;
+    font-family: "proxima-nova", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    border-radius: 10px;
+    transition: 0.3s;
+    margin: 0;
+}
+
+.project-tag:hover {
+    background-color: $p-text !important;
+}
+
+#project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 50px;
+}
+
+#latest-blogs {
+    a {
+        margin-bottom: 50px;
+    }
+
+    .title {
+        font-family: "sofia-pro", sans-serif;
+        font-weight: 700;
+        font-size: 50px;
+        margin: 0;
+    }
+
+    .preview {
+        font-family: "proxima-nova", sans-serif;
+        font-weight: 400;
+        font-size: 20px;
+        margin: 0;
+    }
+
+    .post-info {
+        display: flex;
+        gap: 5px !important;
+        flex-wrap: nowrap;
+        margin-top: 5px;
+        margin-bottom: 0;
+
+        p {
+            margin: 0;
+            font-family: "proxima-nova", sans-serif;
+            font-weight: 400;
+            font-size: 14px;
+        }
+
+        p:first-of-type {
+            color: $accent;
+        }
+
+        p:last-of-type {
+            color: $p-text;
+            filter: brightness(60%);
+        }
+    }
+}
+
+#pinned-blogs {
+    a {
+        padding-bottom: 50px;
+    }
 }

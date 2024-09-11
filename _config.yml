@@ -3,6 +3,8 @@ baseurl: "/"
 title: "TauPau Engineering" # the name of your site, e.g. ACME Corp.
 collections:
   - previews
+  - categories
+  - projects
 
 highlighter: rouge
 kramdown:

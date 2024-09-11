@@ -1,0 +1,38 @@
+---
+layout: main
+---
+
+<h1 id="projects-title">All Projects</h1>
+<section id="project-card-container">
+    {% assign projects = site.projects | sort:"year" %}
+    {% for card in projects reversed %}
+    <a href="{{ card.link }}" target="_blank">
+        <div class="project-card">
+            <img src="assets/{{ card.image }}.png">
+            <h1>{{ card.name }}</h1>
+            <div class="project-content">
+                {{ card.content }}
+                <div class="card-tags">
+                    <div class="card-tag-section">
+                        {% for tag in card.langs %}
+                        <div class="card-tag" style="background-color: #FF6961;">
+                            <p>{{ tag }}</p>
+                        </div>
+                        {% endfor %}
+                        {% for tag in card.tools %}
+                        <div class="card-tag" style="background-color: #C3B1E1;">
+                            <p>{{ tag }}</p>
+                        </div>
+                        {% endfor %}
+                        {% for tag in card.platforms %}
+                        <div class="card-tag" style="background-color: #A0D9EF;">
+                            <p>{{ tag }}</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+    {% endfor %}
+</section>

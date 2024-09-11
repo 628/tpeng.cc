@@ -18,26 +18,65 @@ layout: main
                 <h1>MORE LOGS</h1>
                 <div class="line"></div>
             </div>
+            {% assign posts = site.posts | sort: "date" %}
+            {% for post in posts limit:10 %}
+            <a href="">
+                <h1 class="title">{{ post.title }}</h1>
+                <p class="preview">{{ post.preview }}</p>
+                <div class="post-info">
+                    <p>{{ post.date | date: "%b %d, %Y" }}</p>
+                    <p>•</p>
+                    <p>{{ post.content | strip_html | split: ' ' | size | divided_by: 200 | at_least: 1 }} MIN READ</p>
+                </div>
+            </a>
+            {% endfor %}
         </div>
         <div id="blog-info">
+            <div id="topics">
+                <div class="sec-header">
+                    <h1>PROJECTS</h1>
+                    <div class="line"></div>
+                </div>
+                <div id="project-tags">
+                {% assign proj = site.categories %}
+                {% for project in proj %}
+                <a href=""><p class="project-tag" style="background-color: #{{ project.color }};">{{ project.name }}</p></a>
+                {% endfor %}
+                </div>
+            </div>
             <div id="about-blog">
                 <div class="sec-header">
                     <h1>ABOUT</h1>
+                    <div class="line"></div>
                 </div>
-                {% assign about = site.posts | sort: "about" | first %}
-                <h1>{{ about.title }}</h1>
-                <p class="preview">{{ about.preview }}</p>
-                <div class="post-info">
-                    <p>{{ about.date | date: "%b %d, %Y" }}</p>
-                    <p>•</p>
-                    <p>{{ about.content | strip_html | split: ' ' | size | divided_by: 200 | at_least: 1 }} MIN READ</p>
-                </div>
+                {% assign about = site.posts | where: "about","true" | first %}
+                <a href="">
+                    <h1 class="title">{{ about.title }}</h1>
+                    <p class="preview">{{ about.preview }}</p>
+                    <div class="post-info">
+                        <p>{{ about.date | date: "%b %d, %Y" }}</p>
+                        <p>•</p>
+                        <p>{{ about.content | strip_html | split: ' ' | size | divided_by: 200 | at_least: 1 }} MIN READ</p>
+                    </div>
+                </a>
             </div>
             <div id="pinned-blogs">
-
-            </div>
-            <div id="blog-topics">
-
+                <div class="sec-header">
+                    <h1>FEATURED</h1>
+                    <div class="line"></div>
+                </div>
+                {% assign posts = site.posts | where:"pin","true" | sort: "date" %}
+                {% for post in posts %}
+                <a href="">
+                    <h1 class="title">{{ about.title }}</h1>
+                    <p class="preview">{{ about.preview }}</p>
+                    <div class="post-info">
+                        <p>{{ about.date | date: "%b %d, %Y" }}</p>
+                        <p>•</p>
+                        <p>{{ about.content | strip_html | split: ' ' | size | divided_by: 200 | at_least: 1 }} MIN READ</p>
+                    </div>
+                </a>
+                {% endfor %}
             </div>
         </div>
     </div>
