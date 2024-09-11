@@ -6,410 +6,79 @@
     <link rel="stylesheet" href="/assets/css/main.css" />
     <script src="https://kit.fontawesome.com/e3190c0fb8.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sandro Petrovski</title>
+    <title>TauPau Engineering</title>
   </head>
   <body>
     <!-- Navigation Bar -->
-<section id="nav">
-    <div id="nav-logo">
+    <section id="nav">
+      <div id="nav-logo">
         <img src="assets/logo.png" alt="taupau engineering logo"/>
         <h1>TauPau Engineering</h1>
-    </div>
-    <div id="links">
-        <a class="nav-link" href="#projects">Projects</a>
-        <a class="nav-link" href="#experience">Experience</a>
-        <a class="nav-link" href="#education">Education</a>
+      </div>
+      <div id="links">
+        <a class="nav-link" href="/projects">Projects</a>
+        <a class="nav-link" href="/blog">Blog</a>
+        <a class="nav-link" href="/about">About Us</a>
         <a id="special" class="nav-link" href="/discord" target="_blank">Discord</a>
+      </div>
+    </section>
+    <!-- Header -->
+<section id="highlight">
+    <img src="assets/assembly.png" alt="maize-made arcade assembly" />
+    <div>
+        <img src="assets/title-logo.png" alt="maize-made arcade title logo" />
+        <h3>Project 001</h3>
+        <p>Reinvigorating the golden age of arcade gaming in the digital era, this full-fledged arcade machine was built from the ground up, complete with several classic titles including Pong and Asteroids, all run on a web-based interface written in the GoDot game engine.</p>
+        <a href="">Learn more</a>
     </div>
 </section>
 
-<!-- Header -->
-<section id="header">
-    <div id="header-timeline"></div>
-    <div id="content">
-        <h1>Sandro Petrovski</h1>
-        <div>
-            <h3>B.S.E. Computer Engineering</h3>
-            <h3>University of Michigan</h3>
-        </div>
-        <p id="blurb"><span>Welcome!</span> I'm Sandro, a third-year CE student at the University of Michigan with a
-            passion for both software and hardware! From a young age I've always loved building things from the
-            ground up and exploring new technologies. My main project is the TauPau Engineering organization where I'm
-            working to more formally document projects for others to learn from as well! Feel free to have a look around
-            at the things I've built. :)</p>
-        <div id="links">
-            <a href="https://github.com/628/" target="_blank"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/sandro-petrovski-4694411ab/" target="_blank"><i
-                    class="fa-brands fa-linkedin"></i></a>
-            <a href="mailto:sandropetrovski@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
-        </div>
-    </div>
-</section>
-
-<!-- Projects -->
-<section id="projects">
-    <div class="section-header"><img src="assets/bulb.png" />
-        <h1>Projects</h1>
-    </div>
-
-    <div class="timeline-sec">
-        <div class="timeline"></div>
-        <div id="project-card-container">
-            
-            
-            <a href="" target="_blank">
-                <div class="project-card">
-                    <img src="assets/nixie.png">
-                    <h1>Nixie Tube Clock</h1>
-                    <div class="project-content">
-                        <p><em>[Work in Progress]</em> <br />
-An alarm clock designed from the ground up using Soviet-era IN-14 gas discharge (nixie) tubes– complete with timer and stopwatch functionality!</p>
-
-                        <div class="card-tags">
-                            <div class="card-tag-section">
-                                
-                                <div class="card-tag" style="background-color: #FF6961;">
-                                    <p>C++</p>
-                                </div>
-                                
-                                
-                                
-                                <div class="card-tag" style="background-color: #A0D9EF;">
-                                    <p>RPi</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            
-            <a href="https://github.com/taupau/maize-made-arcade" target="_blank">
-                <div class="project-card">
-                    <img src="assets/mma.png">
-                    <h1>Maize-Made Arcade</h1>
-                    <div class="project-content">
-                        <p><em>[Work in Progress]</em> <br />
-Classic arcade cabinet built entirely in-house; custom PCB header to map the joystick/button inputs to virtual keypresses. Interface / games written in the GoDot game engine.</p>
-
-                        <div class="card-tags">
-                            <div class="card-tag-section">
-                                
-                                <div class="card-tag" style="background-color: #FF6961;">
-                                    <p>GDScript</p>
-                                </div>
-                                
-                                
-                                <div class="card-tag" style="background-color: #C3B1E1;">
-                                    <p>Altium</p>
-                                </div>
-                                
-                                
-                                <div class="card-tag" style="background-color: #A0D9EF;">
-                                    <p>GoDot</p>
-                                </div>
-                                
-                                <div class="card-tag" style="background-color: #A0D9EF;">
-                                    <p>RPi</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            
-            <a href="https://gitlab.com/628/hyperion" target="_blank">
-                <div class="project-card">
-                    <img src="assets/hyperion.png">
-                    <h1>Hyperion</h1>
-                    <div class="project-content">
-                        <p>Command-line utility to easily generate LED animations for WS2812B-based LED strip lights using a bitmap image on a Raspberry Pi.</p>
-
-                        <div class="card-tags">
-                            <div class="card-tag-section">
-                                
-                                <div class="card-tag" style="background-color: #FF6961;">
-                                    <p>Rust</p>
-                                </div>
-                                
-                                
-                                
-                                <div class="card-tag" style="background-color: #A0D9EF;">
-                                    <p>RPi</p>
-                                </div>
-                                
-                                <div class="card-tag" style="background-color: #A0D9EF;">
-                                    <p>Linux</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            
-            <a href="https://gitlab.com/628/mandelbrot-generator" target="_blank">
-                <div class="project-card">
-                    <img src="assets/mandelbrot.png">
-                    <h1>Fractal Visualizer</h1>
-                    <div class="project-content">
-                        <p>This program generates fractals based on the Mandelbrot set within the complex plane, featuring multiple color palettes and customizable window selection for fractal visualization.</p>
-
-                        <div class="card-tags">
-                            <div class="card-tag-section">
-                                
-                                <div class="card-tag" style="background-color: #FF6961;">
-                                    <p>C++</p>
-                                </div>
-                                
-                                
-                                
-                                <div class="card-tag" style="background-color: #A0D9EF;">
-                                    <p>Linux</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            
-        </div>
-    </div>
-</section>
-
-<!-- Experience -->
-<section id="experience">
-    <div class="section-header"><img src="assets/briefcase.png" />
-        <h1>Experience</h1>
-    </div>
-
-    <div class="timeline-sec">
-        <div class="timeline"></div>
-        <div class="timeline-card-container">
-            
-            
-            <div class="timeline-diamond"></div>
-            <div class="card-cont">
-                
-                <p class="timeline-card-dates">2022 - Present</p>
-                
-                <div class="card">
-                    <div class="card-header">
-                        <div class="timeline-arrow"></div>
-                        <h1>TauPau Engineering</h1>
-                    </div>
-                    
-                    <h3>Co-Founder</h3>
-                    
-                    
-                    <p><p>As a founder of TPE (<a href="https://tpeng.cc" target="_blank" style="color: #915EFF;">website</a>), I lead a team dedicated to promoting electronics and STEM education through open-source projects. My responsibilities includes both conceptualizing and executing these projects while also maintaining the website / writing extended documentation. The organization is still in its infancy but we hope to build up a large portfolio of multidiciplinary projects!</p>
+<!-- Preview Cards -->
+ <section id="preview-cards">
+    
+    
+    <div class="preview-card">
+        <img src="assets/nixie.png" />
+        <p><p>A full-fledged arcade machine built from the ground up, complete with several classic titles such as Pong and Asteroids.</p>
 </p>
-                    
-                    <div class="card-tags">
-                        <div class="card-tag-section">
-                            
-                        </div>
-                        <div class="card-tag-section">
-                            
-                        </div>
-                        <div class="card-tag-section">
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="timeline-diamond"></div>
-            <div class="card-cont">
-                
-                <p class="timeline-card-dates">Summer 2024</p>
-                
-                <div class="card">
-                    <div class="card-header">
-                        <div class="timeline-arrow"></div>
-                        <h1>Nippon Seiki International</h1>
-                    </div>
-                    
-                    <h3>Hardware Design Intern • Troy, MI</h3>
-                    
-                    
-                    <p><p>At NSI, I focused on cost reduction and process optimization. I designed and built an in-house flashing jig, saving ~85% per unit, and identified ~$20k in potential savings through a detailed value analysis. Additionally, I resolved supply chain delays by negotiating with third-party vendors, improving lead times for critical components. These projects enhanced my technical skills and provided valuable experience in cost management and engineering process improvements.</p>
-</p>
-                    
-                    <div class="card-tags">
-                        <div class="card-tag-section">
-                            
-                        </div>
-                        <div class="card-tag-section">
-                            
-                        </div>
-                        <div class="card-tag-section">
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="timeline-diamond"></div>
-            <div class="card-cont">
-                
-                <p class="timeline-card-dates">Summer 2023</p>
-                
-                <div class="card">
-                    <div class="card-header">
-                        <div class="timeline-arrow"></div>
-                        <h1>Northern Industrial Mfg.</h1>
-                    </div>
-                    
-                    <h3>IT Project Intern • Harrison Twp, MI</h3>
-                    
-                    
-                    <p><p>My work included improving ISO27001 compliance, implementing an AI-driven marketing strategy, and optimizing data management and inventory tracking. These efforts contributed to securing key customers, boosting online visibility, and streamlining operations, providing me with valuable experience in IT project management and strategic process improvements.</p>
-</p>
-                    
-                    <div class="card-tags">
-                        <div class="card-tag-section">
-                            
-                        </div>
-                        <div class="card-tag-section">
-                            
-                        </div>
-                        <div class="card-tag-section">
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
+        <a href="" target="_blank" class="learn-more">
+            <p>Learn more</p>
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
     </div>
-</section>
+    
+    <div class="preview-card">
+        <img src="assets/tpeng.cc.png" />
+        <p><p>A full-fledged arcade machine built from the ground up, complete with several classic titles such as Pong and Asteroids.</p>
+</p>
+        <a href="" target="_blank" class="learn-more">
+            <p>Learn more</p>
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+    </div>
+    
+    <div class="preview-card">
+        <img src="assets/maverick.png" />
+        <p><p>A full-fledged arcade machine built from the ground up, complete with several classic titles such as Pong and Asteroids.</p>
+</p>
+        <a href="" target="_blank" class="learn-more">
+            <p>Learn more</p>
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+    </div>
+    
+ </section>
 
-<!-- Education -->
-<section id="education">
-    <div class="section-header"><img src="assets/male-student.png" />
-        <h1>Education</h1>
+ <!-- About -->
+  <section id="about">
+    <div>
+        <h1>From <span>concept</span> to <span>creation</span>.</h1>
+        <p>We're an organization founded by two college students with a shared passion for engineering projects and a desire to showcase our work to a wide audience. From the beginning, we embraced the opportunity to share our experiences through our blog, documenting every aspect of the design and implementation process. Our aim is to provide valuable insight into approaching these projects, serving to both inform and entertain. We are driven by the excitement of bringing innovative ideas to life.</p>
     </div>
-
-    <div class="timeline-sec">
-        <div class="timeline"></div>
-        <div class="timeline-card-container">
-            
-            
-            
-            <div class="timeline-diamond"></div>
-            
-            <div class="card-cont">
-                <p class="timeline-card-dates">2022 - 2026</p>
-                <div class="card">
-                    <div class="card-header">
-                        <div class="timeline-arrow"></div>
-                        <h1>B.S.E. Computer Engineering</h1>
-                    </div>
-                    
-                    <h3>University of Michigan • Ann Arbor, MI</h3>
-                    
-                    
-                    <p>
-</p>
-                    
-                    <div class="card-tags">
-                        <div class="card-tag-section">
-                            
-                            <div class="card-tag" style="background-color: #A0D9EF;">
-                                <p>Cumulative GPA: 3.43</p>
-                            </div>
-                            
-                            <div class="card-tag" style="background-color: #A0D9EF;">
-                                <p>Major GPA: 3.73</p>
-                            </div>
-                            
-                        </div>
-                        <div class="card-tag-section">
-                            
-                        </div>
-                        <div class="card-tag-section">
-                            
-                            <div class="card-tag" style="background-color: #DA70D6;">
-                                <p>Data Structures & Algorithms</p>
-                            </div>
-                            
-                            <div class="card-tag" style="background-color: #DA70D6;">
-                                <p>Logic Design</p>
-                            </div>
-                            
-                            <div class="card-tag" style="background-color: #DA70D6;">
-                                <p>Circuits</p>
-                            </div>
-                            
-                            <div class="card-tag" style="background-color: #DA70D6;">
-                                <p>Discrete Math</p>
-                            </div>
-                            
-                            <div class="card-tag" style="background-color: #DA70D6;">
-                                <p>Linear Algebra</p>
-                            </div>
-                            
-                            <div class="card-tag" style="background-color: #DA70D6;">
-                                <p>Differential Equations</p>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            
-            <div class="timeline-diamond"></div>
-            
-            <div class="card-cont">
-                <p class="timeline-card-dates">2018 - 2022</p>
-                <div class="card">
-                    <div class="card-header">
-                        <div class="timeline-arrow"></div>
-                        <h1>High School Diploma</h1>
-                    </div>
-                    
-                    <h3>Armada High School • Armada, MI</h3>
-                    
-                    
-                    <p>
-</p>
-                    
-                    <div class="card-tags">
-                        <div class="card-tag-section">
-                            
-                            <div class="card-tag" style="background-color: #A0D9EF;">
-                                <p>GPA: 4.4</p>
-                            </div>
-                            
-                            <div class="card-tag" style="background-color: #A0D9EF;">
-                                <p>SAT: 1510</p>
-                            </div>
-                            
-                        </div>
-                        <div class="card-tag-section">
-                            
-                            <div class="card-tag" style="background-color: #FF7E83;">
-                                <p>Valedictorian</p>
-                            </div>
-                            
-                            <div class="card-tag" style="background-color: #FF7E83;">
-                                <p>WXYZ Brightest & Best</p>
-                            </div>
-                            
-                        </div>
-                        <div class="card-tag-section">
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
+    <div>
+        <h1>Knowledge in every <span>detail</span>.</h1>
+        <p>We're an organization founded by two college students with a shared passion for engineering projects and a desire to showcase our work to a wide audience. From the beginning, we embraced the opportunity to share our experiences through our blog, documenting every aspect of the design and implementation process. Our aim is to provide valuable insight into approaching these projects, serving to both inform and entertain. We are driven by the excitement of bringing innovative ideas to life.</p>
     </div>
-</section>
+  </section>
   </body>
 </html>

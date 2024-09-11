@@ -125,85 +125,46 @@
   grid-template-rows: 0px 1fr;
 }
 
-#header {
+#highlight {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+#highlight div {
   display: grid;
-  grid-template-columns: 50px 1fr;
-  margin-top: 65px;
+  grid-template-columns: 100%;
+  justify-items: center;
 }
-@media only screen and (max-width: 500px) {
-  #header {
-    grid-template-columns: 25px 1fr;
-  }
+#highlight div img {
+  width: 500px;
+  height: auto;
 }
-#header h1 {
-  font-size: 64px;
+#highlight div h3 {
   font-family: "input-mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+}
+#highlight div p {
+  font-family: "proxima-nova", sans-serif;
+  font-size: 17px;
+  max-width: 400px;
+}
+#highlight div a {
+  background-color: #3498DB;
+  color: #1A1B1F;
+  padding: 5px 15px;
+  font-family: "proxima-nova", sans-serif;
   font-weight: 700;
-  font-style: normal;
-  margin: 0;
-}
-@media only screen and (max-width: 500px) {
-  #header h1 {
-    font-size: 50px;
-  }
-}
-@media only screen and (max-width: 500px) {
-  #header h1 {
-    font-size: 50px;
-  }
-}
-@media only screen and (max-width: 360px) {
-  #header h1 {
-    font-size: 40px;
-  }
-}
-#header h3 {
-  font-size: 18px;
-  font-family: "input-mono", monospace;
-  font-weight: 400;
-  font-style: italic;
-  margin: 0;
-}
-@media only screen and (max-width: 360px) {
-  #header h3 {
-    font-size: 18px;
-  }
-}
-#header #header-timeline {
-  background: #3498DB;
-  background: linear-gradient(0deg, #1A1B1F 0%, #3498DB 100%);
-  width: 6px;
-  margin-top: 5px;
-  border-radius: 10px 10px 0 0;
-}
-#header #blurb {
-  font-family: "open-sans", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 20px;
-  padding-bottom: 10px;
-  max-width: 750px;
-}
-#header #blurb span {
-  color: #3498DB;
-}
-@media only screen and (max-width: 360px) {
-  #header #blurb {
-    font-size: 18px;
-  }
-}
-#header #links > * {
-  text-decoration: none;
-  color: #FCFCFF;
-  margin-right: 30px;
-  font-size: 30px;
+  font-size: 17px;
+  max-width: 400px;
+  border-radius: 30px;
   transition: 0.3s;
 }
-#header #links > *:hover {
-  color: #3498DB;
-}
-#header #content {
-  padding-bottom: 15px;
+#highlight div a:hover {
+  color: #1A1B1F;
+  background-color: #FCFCFF;
 }
 
 #nav {
@@ -391,6 +352,94 @@
 
 .project-card:hover {
   transform: scale(1.03);
+}
+
+#preview-cards {
+  display: flex;
+  gap: 60px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 60px 0;
+}
+
+.preview-card {
+  width: 300px;
+  height: 250px;
+  background-color: #222429;
+  display: grid;
+  grid-template-columns: 100%;
+  justify-items: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+.preview-card img {
+  width: 300px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+.preview-card p {
+  font-family: "proxima-nova", sans-serif;
+  font-size: 15px;
+  margin: 0;
+  width: 250px;
+}
+.preview-card .learn-more {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  gap: 10px;
+  margin-top: 7px;
+}
+.preview-card .learn-more i {
+  transition: 0.3s;
+}
+.preview-card .learn-more p {
+  width: fit-content;
+}
+.preview-card .learn-more:hover i {
+  transform: translateX(4px);
+}
+
+#about {
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: 100%;
+  justify-items: center;
+}
+#about h1 {
+  font-size: 50px;
+  font-family: "sofia-pro", sans-serif;
+  margin-bottom: 20px;
+  margin-top: 0;
+  text-align: center;
+}
+#about h1 span {
+  color: #3498DB;
+}
+#about div {
+  margin-bottom: 50px;
+}
+#about div h1 {
+  font-size: 50px;
+  font-family: "sofia-pro", sans-serif;
+  margin-bottom: 20px;
+  margin-top: 0;
+  text-align: center;
+}
+#about div h1 span {
+  color: #3498DB;
+}
+#about div p {
+  font-family: "proxima-nova", sans-serif;
+  font-size: 20px;
+  margin-left: 5px;
+  margin-top: 0;
+  max-width: 900px;
+}
+#about img {
+  height: 300px;
+  width: auto;
+  border-radius: 10px;
 }
 
 :root {

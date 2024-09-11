@@ -1,0 +1,47 @@
+#highlight {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+
+    div {
+        display: grid;
+        grid-template-columns: 100%;
+        justify-items: center;
+
+        img {
+            width: 500px;
+            height: auto;
+        }
+
+        h3 {
+            font-family: "input-mono", monospace;
+            font-weight: 400;
+            font-style: normal;
+            margin: 0;
+        }
+
+        p {
+            font-family: "proxima-nova", sans-serif;
+            font-size: 17px;
+            max-width: 400px;
+        }
+
+        a {
+            background-color: $accent;
+            color: $bg;
+            padding: 5px 15px;
+            font-family: "proxima-nova", sans-serif;
+            font-weight: 700;
+            font-size: 17px;
+            max-width: 400px;
+            border-radius: 30px;
+            transition: 0.3s;
+        }
+
+        a:hover {
+            color: $bg;
+            background-color: $p-text;
+        }
+    }
+}

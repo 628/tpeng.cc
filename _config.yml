@@ -1,13 +1,8 @@
-url: "https://petrovski.cc"
+url: "https://tpeng.cc"
 baseurl: "/"
-title: "Sandro Petrovski" # the name of your site, e.g. ACME Corp.
+title: "TauPau Engineering" # the name of your site, e.g. ACME Corp.
 collections:
- education:
-  sort_by: endYear
- projects:
-  sort_by: sort
- experience:
-  sort_by: endYear
+  - previews
 
 highlighter: rouge
 kramdown:

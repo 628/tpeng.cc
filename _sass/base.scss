@@ -1,9 +1,11 @@
 @import "card";
-@import "header";
+@import "highlight";
 @import "nav";
 @import "section_header";
 @import "project_card";
 @import "vars";
+@import "preview_card";
+@import "about";
 
 :root {
   background-color: $bg;

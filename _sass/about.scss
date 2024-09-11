@@ -1,0 +1,48 @@
+#about {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 100%;
+    justify-items: center;
+
+    h1 {
+        font-size: 50px;
+        font-family: "sofia-pro", sans-serif;
+        margin-bottom: 20px;
+        margin-top: 0;
+        text-align: center;
+
+        span {
+            color: $accent;
+        }
+    }
+
+    div {
+        margin-bottom: 50px;
+
+        h1 {
+            font-size: 50px;
+            font-family: "sofia-pro", sans-serif;
+            margin-bottom: 20px;
+            margin-top: 0;
+            text-align: center;
+
+            span {
+                color: $accent;
+            }
+        }
+
+        p {
+            font-family: "proxima-nova", sans-serif;
+            font-size: 20px;
+            margin-left: 5px;
+            margin-top: 0;
+            max-width: 900px;
+        }
+    }
+
+    img {
+        height: 300px;
+        width: auto;
+        border-radius: 10px;
+    }
+}
