@@ -2,11 +2,43 @@
 layout: main
 ---
 <section id="blogs">
-    <div id="latest-blog">
-        {% assign latest = site.posts | sort: "title" | first %}
-        <h3>LATEST — {{ latest.date | date: "%b %d, %Y" | upcase }}</h3>
-        <h1>{{ latest.title }}</h1>
-        <p>{{ latest.preview }}</p>
-        <p>{{ latest.content | strip_html | split: ' ' | size | divided_by: 200 | at_least: 1 }} MIN READ</p>
+    <a href="/latest">
+        <div id="latest-blog">
+            {% assign latest = site.posts | sort: "title" | first %}
+            <h3>LATEST — {{ latest.date | date: "%b %d, %Y" | upcase }}</h3>
+            <h1>{{ latest.title }}</h1>
+            <p id="latest-preview">{{ latest.preview }}</p>
+            <p class="read-time">{{ latest.content | strip_html | split: ' ' | size | divided_by: 200 | at_least: 1 }}
+                MIN READ</p>
+        </div>
+    </a>
+    <div id="blog-list">
+        <div id="latest-blogs">
+            <div>
+                <h1>MORE LOGS</h1>
+                <div class="line"></div>
+            </div>
+        </div>
+        <div id="blog-info">
+            <div id="about-blog">
+                <div class="sec-header">
+                    <h1>ABOUT</h1>
+                </div>
+                {% assign about = site.posts | sort: "about" | first %}
+                <h1>{{ about.title }}</h1>
+                <p class="preview">{{ about.preview }}</p>
+                <div class="post-info">
+                    <p>{{ about.date | date: "%b %d, %Y" }}</p>
+                    <p>•</p>
+                    <p>{{ about.content | strip_html | split: ' ' | size | divided_by: 200 | at_least: 1 }} MIN READ</p>
+                </div>
+            </div>
+            <div id="pinned-blogs">
+
+            </div>
+            <div id="blog-topics">
+
+            </div>
+        </div>
     </div>
 </section>

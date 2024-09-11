@@ -442,6 +442,107 @@
   border-radius: 10px;
 }
 
+#latest-blog {
+  display: grid;
+  grid-template-columns: 100%;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+#latest-blog h3 {
+  color: #3498DB;
+  font-family: "proxima-nova", monospace;
+  font-weight: 400;
+  font-size: 15px;
+  margin: 0;
+}
+#latest-blog h1 {
+  color: #FCFCFF;
+  font-family: "sofia-pro", sans-serif;
+  font-weight: 700;
+  font-size: 70px;
+  margin: 0;
+  transition: 0.3s;
+}
+#latest-blog #latest-preview {
+  font-family: "proxima-nova", sans-serif;
+  font-weight: 400;
+  font-size: 27px;
+  margin: 0;
+  max-width: 60vw;
+}
+#latest-blog .read-time {
+  font-family: "proxima-nova", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  margin: 0;
+  filter: brightness(60%);
+  margin-top: 15px;
+}
+
+#latest-blog:hover h1 {
+  filter: brightness(75%);
+}
+
+#blog-list {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 50px;
+  width: 100%;
+}
+#blog-list #latest-blogs div {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 30px;
+  align-items: center;
+}
+#blog-list #latest-blogs div h1 {
+  font-size: 15px;
+  font-family: "proxima-nova", sans-serif;
+  font-weight: 700;
+  margin: 0;
+  text-wrap: nowrap;
+  width: fit-content;
+}
+#blog-list #blog-info {
+  max-width: 450px;
+}
+#blog-list #blog-info #about-blog h1 {
+  font-family: "sofia-pro", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  margin: 0;
+}
+#blog-list #blog-info #about-blog .preview {
+  font-family: "proxima-nova", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  margin: 0;
+}
+#blog-list #blog-info #about-blog .post-info {
+  display: flex;
+  gap: 5px;
+  flex-wrap: nowrap;
+}
+#blog-list #blog-info #about-blog .post-info p {
+  margin: 0;
+  font-family: "proxima-nova", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+#blog-list #blog-info #about-blog .post-info p:first-of-type {
+  color: #3498DB;
+}
+#blog-list #blog-info #about-blog .post-info p:last-of-type {
+  color: #FCFCFF;
+  filter: brightness(60%);
+}
+
+.line {
+  height: 1px;
+  width: 100%;
+  background-color: #FCFCFF;
+}
+
 :root {
   background-color: #1A1B1F;
   font-synthesis: none;

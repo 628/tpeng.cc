@@ -1,0 +1,119 @@
+#latest-blog {
+    display: grid;
+    grid-template-columns: 100%;
+    margin-top: 100px;
+    margin-bottom: 50px;
+
+    h3 {
+        color: $accent;
+        font-family: "proxima-nova", monospace;
+        font-weight: 400;
+        font-size: 15px;
+        margin: 0;
+    }
+
+    h1 {
+        color: $p-text;
+        font-family: "sofia-pro", sans-serif;
+        font-weight: 700;
+        font-size: 70px;
+        margin: 0;
+        transition: 0.3s;
+    }
+
+    #latest-preview {
+        font-family: "proxima-nova", sans-serif;
+        font-weight: 400;
+        font-size: 27px;
+        margin: 0;
+        max-width: 60vw;
+    }
+
+    .read-time {
+        font-family: "proxima-nova", sans-serif;
+        font-weight: 400;
+        font-size: 15px;
+        margin: 0;
+        filter: brightness(60%);
+        margin-top: 15px;
+    }
+}
+
+#latest-blog:hover {
+    h1 {
+        filter: brightness(75%);
+    }
+}
+
+#blog-list {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 50px;
+    width: 100%;
+
+    #latest-blogs {
+        div {
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 30px;
+            align-items: center;
+
+            h1 {
+                font-size: 15px;
+                font-family: "proxima-nova", sans-serif;
+                font-weight: 700;
+                margin: 0;
+                text-wrap: nowrap;
+                width: fit-content;
+            }
+        }
+    }
+
+    #blog-info {
+        max-width: 450px;
+
+        #about-blog {
+            h1 {
+                font-family: "sofia-pro", sans-serif;
+                font-weight: 700;
+                font-size: 30px;
+                margin: 0;
+            }
+
+            .preview {
+                font-family: "proxima-nova", sans-serif;
+                font-weight: 400;
+                font-size: 15px;
+                margin: 0;
+            }
+
+            .post-info {
+                display: flex;
+                gap: 5px;
+                flex-wrap: nowrap;
+
+                p {
+                    margin: 0;
+                    font-family: "proxima-nova", sans-serif;
+                    font-weight: 400;
+                    font-size: 14px;
+                }
+
+                p:first-of-type {
+                    color: $accent;
+                }
+
+                p:last-of-type {
+                    color: $p-text;
+                    filter: brightness(60%);
+                }
+            }
+        }
+    }
+}
+
+.line {
+    height: 1px;
+    width: 100%;
+    background-color: $p-text;
+}
